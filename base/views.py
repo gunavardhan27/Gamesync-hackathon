@@ -4,6 +4,8 @@ from .forms import CustomUserForm
 from .models import Games,BattleRoyale
 from .filters import GameFilter
 # Create your views here.
+def home(request):
+    return render(request,'base/home.html')
 def register(request):
     form = CustomUserForm()
     if request.method=='POST':
@@ -13,11 +15,6 @@ def register(request):
             return redirect('/')    
     context = {'form':form}
     return render(request,'base/register.html',context)
-
-def home(request):
-    #game = Games.objects.all()
-    context = {}
-    return render(request,'base/Home.html',context)
 def gaming_profile(request,pk):
     game_pf = BattleRoyale.objects.filter(Game__name=pk)
     context = {'pf':game_pf}
