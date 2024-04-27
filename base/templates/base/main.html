@@ -5,8 +5,11 @@
         crossorigin="anonymous">
     </head>
     <body>
-    
-        hello bredah</body>
+        {%for game in game%}
+    <a href="{% url 'profiles' game.name%}">{{game.name}}</a>
+    </body>
+    {%endfor%}
+    </body>
     
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" 
     integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
