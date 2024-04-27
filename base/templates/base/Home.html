@@ -1,10 +1,13 @@
+{%load static%}
+
+{%block content%}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="{%static 'css/home.css'%}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link 
@@ -20,7 +23,7 @@ href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,
                 <li style="margin-top: 10px;">Services</li>
                 <li style="margin-top: 10px;">About</li>
                 <li style="margin-top: 10px;">Contact</li>
-                <li><button>SignUp</button></li>
+                <li style="margin-top: 10px;"><a href="{%url 'register_form'%}" style="text-decoration: none;">Sign Up</a></li>
             </ul>
         </div>
 
@@ -69,3 +72,4 @@ href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,
     </main>
 </body>
 </html>
+{%endblock%}
