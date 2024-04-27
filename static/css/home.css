@@ -1,5 +1,6 @@
 nav li{
     list-style-type: none;
+    cursor: pointer;
 }
 nav {
     display: flex;
@@ -54,6 +55,7 @@ button{
     border: none;
     background-color: #212121;
     color: aliceblue;
+    cursor: pointer;
 }
 .middle_one{
     display: flex;
