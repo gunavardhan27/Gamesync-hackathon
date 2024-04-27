@@ -1,0 +1,9 @@
+<form method="GET">
+    {%csrf_token%}
+    {{data.form}}
+    <input type="submit" value="submit">
+</form>
+
+{%for i in set%}
+<h2>{{i.name}}</h2>
+{%endfor%}
