@@ -3,6 +3,8 @@ from django.contrib.auth import login,logout,authenticate
 from .forms import CustomUserForm
 from .models import Games,BattleRoyale
 # Create your views here.
+def home(request):
+    return render(request,'base/home.html')
 def register(request):
     form = CustomUserForm()
     if request.method=='POST':
@@ -12,11 +14,6 @@ def register(request):
             return redirect('/')    
     context = {'form':form}
     return render(request,'base/register.html',context)
-
-def home(request):
-    #game = Games.objects.all()
-    context = {}
-    return render(request,'base/Home.html',context)
 def gaming_profile(request,pk):
     game_pf = BattleRoyale.objects.filter(Game__name=pk)
     context = {'pf':game_pf}
@@ -33,5 +30,7 @@ def Login(request):
     context={}
     return render(request,'base/Login.html',context)
 
-def fun(request):
-    return render(request,'base/main.html')
+def game(request):
+    game = Games.objects.all()
+    context = {'game':game}
+    return render(request,'base/main.html',context)
