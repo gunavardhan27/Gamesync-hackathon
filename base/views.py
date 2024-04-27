@@ -2,6 +2,7 @@ from django.shortcuts import render,redirect
 from django.contrib.auth import login,logout,authenticate
 from .forms import CustomUserForm
 from .models import Games,BattleRoyale
+from .filters import GameFilter
 # Create your views here.
 def register(request):
     form = CustomUserForm()
@@ -35,3 +36,10 @@ def Login(request):
 
 def fun(request):
     return render(request,'base/main.html')
+
+def filters(request):
+    options = BattleRoyale.objects.all()
+    data = GameFilter(request.GET,queryset=options)
+    options=data.qs 
+    context={'data':data,'set':options}
+    return render(request,'base/filter.html',context)
