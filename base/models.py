@@ -11,9 +11,6 @@ class User(AbstractUser):
     def __str__(self):
         return self.username
 
-
-
-
 class Games(models.Model):
     name = models.CharField(max_length=150)
     image = models.ImageField(null=True, blank=True)
