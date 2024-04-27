@@ -1,0 +1,75 @@
+{%load static%}
+
+{%block content%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{%static 'css/home.css'%}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link 
+href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,
+300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+ rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <div>GameSync</div>
+        <div>
+            <ul>
+                <li style="margin-top: 10px;">Services</li>
+                <li style="margin-top: 10px;">About</li>
+                <li style="margin-top: 10px;">Contact</li>
+                <li style="margin-top: 10px;"><a href="{%url 'register_form'%}" style="text-decoration: none;">Sign Up</a></li>
+            </ul>
+        </div>
+
+    </nav>
+    <main>
+        <div class="top">
+        <div class="left">
+            <h1>Join a Thriving Gaming Community</h1>
+            <p>GameSync is the ultimate hub for gamers looking to connect, 
+            find teammates, and join exciting community events. Experience 
+            the thrill of gaming together today!</p>
+            <a href="#middle"><button> View All Services</button></a>
+            
+        </div>
+        <div class="right">
+            <img 
+            src="https://10web-site.ai/6/wp-content/uploads/sites/7/2024/04/georgie-cobbs-bKjHgo_Lbpo-unsplash_5J17iPGO.webp" 
+            alt="">
+        </div>
+        </div>
+        <div class="middle" id="middle">
+            <h1 style="font-size: 60px;">Our Services</h1>
+        <div class="middle_one" >
+            <div class="one">
+                <img src="https://10web-site.ai/6/wp-content/uploads/sites/7/2024/04/sam-balye-fjTJ_Q0Pwkg-unsplash_5J17iPGO.webp" alt="one">
+                <h1>Hire a Gamer</h1>
+                <p>Experience the thrill of gaming with the perfect teammate.
+                     Hire a gamer that matches your 
+                    playing style and preferences.</p>
+            </div>
+            <div class="one">
+                <img src="https://10web-site.ai/6/wp-content/uploads/sites/7/2024/04/evelyn-paris-QR_vT8_hBZM-unsplash_5J17iPGO.webp" alt="one">
+                <h1>Community Events</h1>
+                <p>Experience the joy of gaming with a vibrant community of gamers. 
+                    Join us for our community events and connect with 
+                    like-minded individuals from all over…</p>
+            </div>
+            <div class="one">
+                <img src="https://10web-site.ai/6/wp-content/uploads/sites/7/2024/04/soroush-karimi-crjPrExvShc-unsplash_5J17iPGO.webp" alt="one">
+                <h1>Team Finder</h1>
+                <p>Connect with like-minded gamers and build long-lasting friendships. 
+                    Join a team that shares your gaming interests and preferences.</p>
+            </div>
+        </div>
+    </div>
+    </main>
+</body>
+</html>
+{%endblock%}
