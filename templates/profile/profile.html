@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modern Profile Card</title>
+  <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+<div style="display: flex; flex-direction: row; gap: 20px;">
+<div class="profile-card">
+  <div class="profile-img">
+    <img src="gaming-profile-pictures-ai9qlazq1uszo8v4.jpg" alt="Profile Picture">
+  </div>
+  <div class="profile-info">
+    <h2>ColdChile</h2>
+    <p>Level 56</p>
+    <p>Grand Master</p>
+    
+    <button id="show-details-btn" onclick="showDetailsPopup()">Show Details</button>
+  </div>
+</div>
+
+<div class="profile-card">
+    <div class="profile-img">
+      <img src="gaming-profile-pictures-ai9qlazq1uszo8v4.jpg" alt="Profile Picture">
+    </div>
+    <div class="profile-info">
+      <h2>ColdChile</h2>
+      <p>Level 56</p>
+      <p>Grand Master</p>
+      
+      <button id="show-details-btn" onclick="showDetailsPopup()">Show Details</button>
+    </div>
+  </div>
+  <div class="profile-card">
+    <div class="profile-img">
+      <img src="gaming-profile-pictures-ai9qlazq1uszo8v4.jpg" alt="Profile Picture">
+    </div>
+    <div class="profile-info">
+      <h2>ColdChile</h2>
+      <p>Level 56</p>
+      <p>Grand Master</p>
+      
+      <button id="show-details-btn" onclick="showDetailsPopup()">Show Details</button>
+    </div>
+  </div>
+</div>
+<div id="details-popup" class="popup">
+  <div class="popup-content">
+    <span class="close-btn" onclick="hideDetailsPopup()">&times;</span>
+    <h2>Full Details</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et eros a velit commodo ultricies. Phasellus et ex id magna vestibulum consectetur nec id nunc.</p>
+    <p><strong>Email:</strong> john@example.com</p>
+    <p><strong>Phone:</strong> +1234567890</p>
+    <button onclick="hideDetailsPopup()">Close</button>
+  </div>
+</div>
+
+<script>
+    function showDetailsPopup() {
+  document.getElementById("details-popup").style.display = "block";
+}
+
+function hideDetailsPopup() {
+  document.getElementById("details-popup").style.display = "none";
+}
+</script>
+</body>
+</html>
