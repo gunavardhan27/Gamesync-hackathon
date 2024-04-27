@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'base',
 ]
-
+AUTH_USER_MODEL = 'base.User'
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -115,9 +115,21 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
-
+import os
+#STATIC_URL = 'static/'
 STATIC_URL = 'static/'
 
+#for css files to load
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static')
+]
+#for media
+MEDIA_ROOT = os.path.join(BASE_DIR,'static/images')
+#MEDIA_ROOT =BASE_DIR/'upload'
+#MEDIA_URL = "/media/"
+MEDIA_URL = '/images/'
+# Default primary key field type
+# https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
