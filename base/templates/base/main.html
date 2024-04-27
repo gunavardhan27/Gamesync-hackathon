@@ -5,6 +5,7 @@
         crossorigin="anonymous">
     </head>
     <body>
+        <h1>Hello {{request.user.username}}</h1>
         {%for game in game%}
     <a href="{% url 'profiles' game.name%}">{{game.name}}</a>
     </body>
