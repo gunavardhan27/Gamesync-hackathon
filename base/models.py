@@ -17,11 +17,12 @@ class User(AbstractUser):
 class Games(models.Model):
     name = models.CharField(max_length=150)
     image = models.ImageField(null=True, blank=True)
-    def _str_(self):
+    def __str__(self):
         return self.name
     
 class BattleRoyale(models.Model):
     Game = models.ForeignKey(Games, on_delete=models.CASCADE)
+    image = models.ImageField(null=True, blank=True)
     Type_of_gameplay = models.CharField( max_length=150,null=True,blank=True)
     name = models.CharField(max_length=150,null=True,blank=True)
     player_id = models.CharField(max_length=50,null=True,blank=True)
@@ -32,10 +33,11 @@ class BattleRoyale(models.Model):
     no_of_headshots = models.IntegerField()
     top_3_ratio = models.FloatField()
     Avg_damage = models.FloatField()
-    def _str_(self):
-        return self.player_id
+    def __str__(self):
+        return self.name
 class ClashRoyale(models.Model):
     Game = models.ForeignKey(Games, on_delete=models.CASCADE)
+    image = models.ImageField(null=True, blank=True)
     name = models.CharField(max_length=150,null=True,blank=True)
     player_id = models.CharField(max_length=50,null=True,blank=True)
     Level = models.IntegerField()
