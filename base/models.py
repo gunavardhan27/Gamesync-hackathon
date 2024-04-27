@@ -16,6 +16,7 @@ from django.db import models
 
 class Games(models.Model):
     name = models.CharField(max_length=150)
+    image = models.ImageField(null=True, blank=True)
     def _str_(self):
         return self.name
     
