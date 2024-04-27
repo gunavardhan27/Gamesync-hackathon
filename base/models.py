@@ -11,7 +11,7 @@ class User(AbstractUser):
     def __str__(self):
         return self.username
 
-from django.db import models
+
 
 
 class Games(models.Model):
@@ -32,4 +32,14 @@ class BattleRoyale(models.Model):
     top_3_ratio = models.FloatField()
     Avg_damage = models.FloatField()
     def _str_(self):
+        return self.player_id
+class ClashRoyale(models.Model):
+    Game = models.ForeignKey(Games, on_delete=models.CASCADE)
+    name = models.CharField(max_length=150,null=True,blank=True)
+    player_id = models.CharField(max_length=50,null=True,blank=True)
+    Level = models.IntegerField()
+    Rank = models.CharField(max_length=150)
+    kd_ratio = models.FloatField()
+    headshot_rate = models.FloatField()
+    def __self__(self):
         return self.player_id
